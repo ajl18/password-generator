@@ -1,8 +1,11 @@
 // Assignment code here
 
+var charSelections = ""
 var lowercaseChar = "abcdefghijklmnopqrstuvwxyz" ;
 var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
 var specialChar = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~" ;
+var YES = "YES"
+var NO = "NO"
 
 
 var generatePassword = function () {
@@ -16,9 +19,42 @@ var generatePassword = function () {
 
   console.log(numChars);
 
+  var lowerCase = confirm ("Would you like to include lower case characters? Click ok to include / Cancel to exclude.")
+
+  console.log(lowerCase);
+
+  var upperCase = confirm ("Would you like to include upper case characters? Click ok to include / Cancel to exclude.")
+
+  console.log(upperCase);
+
+  var specialChar = confirm ("Would you like to include special characters? Click ok to include / Cancel to exclude.")
+
+
+  console.log(specialChar);
+
+if (lowerCase == true ) {
+  charSelections = charSelections + lowercaseChar 
+};
+
+if (upperCase == true ) {
+  charSelections = charSelections + uppercaseChar
+};
+
+if (specialChar == true ) {
+  charSelections = charSelections + specialChar
+};
+
+
+console.log(charSelections);
+
+for (var i = 0 ; i < numChars ; i++) {
 
 }
 
+
+return "temporary-string"
+
+}
 
 
 
